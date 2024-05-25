@@ -1,0 +1,113 @@
+@import url(https://unpkg.com/fixedsys-css/css/fixedsys.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'fixedsys';
+  color: white;
+  /* background: linear-Gradient(to top left, #28b487, #7dd56f); */
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #0b1c47;
+}
+.header {
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.header .again-btn {
+  border: none;
+  height: 60px;
+  width: 200px;
+  font-size: 30px;
+  font-family: 'fixedsys';
+  color: #0b1c47;
+}
+.header p {
+  font-size: 40px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 7px white solid;
+  position: relative;
+}
+.title h1 {
+  font-size: 90px;
+  margin-top: 80px;
+  margin-bottom: 160px;
+}
+.guess-num {
+  width: 170px;
+  height: 170px;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -85px;
+}
+.guess-num p {
+  color: #0b1c47;
+  font-size: 100px;
+}
+.score-div {
+  padding: 40px;
+  margin-top: 90px;
+  height: fit-content;
+}
+.guess-div {
+  font-family: 'fixedsys';
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.guess-div div {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.guess-div div i {
+  font-family: 'fixedsys';
+  margin-right: 20px;
+  font-weight: 500;
+}
+.input-num {
+  border: 5px white solid;
+  font-family: 'fixedsys';
+  font-size: 40px;
+  outline: none;
+  height: 90px;
+  width: 200px;
+  background-color: #0b1c47;
+  color: white;
+  padding-left: 80px;
+}
+.check-btn {
+  outline: none;
+  height: 70px;
+  width: 170px;
+  font-family: 'fixedsys';
+  font-size: 35px;
+  color: #0b1c47;
+}
+.check-score {
+  font-size: 60px;
+  display: flex;
+  justify-content: space-around;
+}
