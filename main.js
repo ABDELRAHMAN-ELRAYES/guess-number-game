@@ -24,11 +24,12 @@ checkBtn.addEventListener('click', () => {
     againBtn.style.color = '#21B6A8';
     correctNumber.style.color = '#21B6A8';
     checkBtn.style.color = '#21B6A8';
+    rateMsg.textContent = 'Correct number !';
   } else if (inputValue.value > randomNumber) {
-    rateMsg.textContent = 'High';
+    rateMsg.textContent = 'Too High!';
     user.score -= 1;
   } else {
-    rateMsg.textContent = 'Low';
+    rateMsg.textContent = 'Too Low!';
     user.score -= 1;
   }
   scoreMsg.textContent = user.score;
@@ -45,4 +46,5 @@ againBtn.addEventListener('click', () => {
   againBtn.style.color = '#0b1c47';
   correctNumber.style.color = '#0b1c47';
   checkBtn.style.color = '#0b1c47';
+  rateMsg.textContent = 'Start guessing...';
 });
