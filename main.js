@@ -1,6 +1,5 @@
 'use strict';
 
-const WIN_COLOR = '#21B6A8';
 const NORMAL_COLOR = '#0b1c47';
 
 let back = document.querySelector('.container');
@@ -21,16 +20,12 @@ let user = {
 let highestScore;
 scoreMsg.textContent = user.score;
 highScoreMsg.textContent = 0;
-
+console.log(randomNumber);
 checkBtn.addEventListener('click', () => {
   const guessVal = inputValue.value;
   if (guessVal == randomNumber) {
     correctNumber.textContent = randomNumber;
-    back.style.backgroundColor = WIN_COLOR;
-    inputValue.style.backgroundColor = WIN_COLOR;
-    againBtn.style.color = WIN_COLOR;
-    correctNumber.style.color = WIN_COLOR;
-    checkBtn.style.color = WIN_COLOR;
+    back.style.background = 'linear-gradient(to top left, #d3c1c3,#01204e )';
     rateMsg.textContent = 'Correct number !';
     if (highestScore > user.score) {
       highScoreMsg.textContent = highestScore;
@@ -62,9 +57,10 @@ againBtn.addEventListener('click', () => {
   scoreMsg.textContent = user.score;
   correctNumber.textContent = '?';
   back.style.backgroundColor = NORMAL_COLOR;
-  inputValue.style.backgroundColor = NORMAL_COLOR;
+  // inputValue.style.backgroundColor = NORMAL_COLOR;
   againBtn.style.color = NORMAL_COLOR;
   correctNumber.style.color = NORMAL_COLOR;
   checkBtn.style.color = NORMAL_COLOR;
+  back.style.background = 'linear-gradient(to top left, #01204e, #d3c1c3)';
   rateMsg.textContent = 'Start guessing...';
 });
