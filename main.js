@@ -11,10 +11,14 @@ let scoreMsg = document.querySelector('.score');
 let highScoreMsg = document.querySelector('.highScore');
 let againBtn = document.querySelector('.again-btn');
 let inputValue = document.querySelector('.input-num');
+
 let randomNumber = Math.trunc(Math.random() * 20) + 1;
+
 let user = {
   score: 20,
 };
+
+let highestScore;
 scoreMsg.textContent = user.score;
 highScoreMsg.textContent = 0;
 
@@ -22,13 +26,18 @@ checkBtn.addEventListener('click', () => {
   const guessVal = inputValue.value;
   if (guessVal == randomNumber) {
     correctNumber.textContent = randomNumber;
-    highScoreMsg.textContent = user.score;
     back.style.backgroundColor = WIN_COLOR;
     inputValue.style.backgroundColor = WIN_COLOR;
     againBtn.style.color = WIN_COLOR;
     correctNumber.style.color = WIN_COLOR;
     checkBtn.style.color = WIN_COLOR;
     rateMsg.textContent = 'Correct number !';
+    if (highestScore > user.score) {
+      highScoreMsg.textContent = highestScore;
+    } else {
+      highestScore = user.score;
+      highScoreMsg.textContent = user.score;
+    }
   } else if (guessVal > randomNumber) {
     if (user.score > 0) {
       rateMsg.textContent = 'Too High!';
@@ -51,7 +60,6 @@ againBtn.addEventListener('click', () => {
   randomNumber = Math.trunc(Math.random() * 20) + 1;
   user.score = 20;
   scoreMsg.textContent = user.score;
-  highScoreMsg.textContent = 0;
   correctNumber.textContent = '?';
   back.style.backgroundColor = NORMAL_COLOR;
   inputValue.style.backgroundColor = NORMAL_COLOR;
